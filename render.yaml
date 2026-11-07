@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: xray-sg
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: UUID
+        sync: false
+      - key: WS_PATH
+        value: /xray
